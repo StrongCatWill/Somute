@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
-    static final String DATABASE_NAME = "somute.db";
+    static final String DATABASE_NAME = "somute2.db";
 
     // DBHelper 생성자
     public DBHelper(Context context, int version) {
@@ -16,7 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     // Sound Table 생성
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE Sound(date INT, num INT)");
+        db.execSQL("CREATE TABLE Sound(year INT, month INT, day INT, num INT)");
     }
 
     // Sound Table Upgrade
@@ -27,9 +27,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     // Sound Table 데이터 입력
-    public void insert(int date, int num) {
+    public void insert(int year, int month, int day, int num) {
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("INSERT INTO Sound VALUES('" + date + "', " + num + ");");
+        db.execSQL("INSERT INTO Sound VALUES('" + year + "', '" + month + "', '" + day + "', '" + num + "');");
         db.close();
     }
 
@@ -61,7 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
         // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
-        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE (date-221200)>0 ORDER BY date ASC", null);
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE (date-20221200)>0 ORDER BY date ASC", null);
         while (cursor.moveToNext()) {
             result += cursor.getInt(0) + "-";
         }
