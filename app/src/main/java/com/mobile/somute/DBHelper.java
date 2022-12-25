@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
-    static final String DATABASE_NAME = "somute2.db";
+    static final String DATABASE_NAME = "somute4.db";
 
     // DBHelper 생성자
     public DBHelper(Context context, int version) {

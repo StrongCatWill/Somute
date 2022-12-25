@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MoodTracker extends AppCompatActivity {
 
-    int cYear, cMonth, cDayOfMonth, cSoundNum;
+    int cYear, cMonth, cDayOfMonth;
     CalendarView calView;
     EditText et_date, et_soundNum;
     Button btn_saveDB;
@@ -113,30 +113,7 @@ public class MoodTracker extends AppCompatActivity {
         btn_saveDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(et_soundNum.getText().equals("1")){
-                    cSoundNum = 1;
-                }
-                else if(et_soundNum.getText().equals("2")){
-                    cSoundNum = 2;
-                }
-                else if(et_soundNum.getText().equals("3")){
-                    cSoundNum = 3;
-                }
-                else if(et_soundNum.getText().equals("4")){
-                    cSoundNum = 4;
-                }
-                else if(et_soundNum.getText().equals("5")){
-                    cSoundNum = 5;
-                }
-                else if(et_soundNum.getText().equals("6")){
-                    cSoundNum = 6;
-                }
-                else if(et_soundNum.getText().equals("7")){
-                    cSoundNum = 7;
-                }
-                else { cSoundNum = 8; }
-
-                dbHelper.insert(cYear, cMonth, cDayOfMonth, cSoundNum);
+                dbHelper.insert(cYear, cMonth, cDayOfMonth, Integer.parseInt(et_soundNum.getText().toString()));
                 Toast.makeText(MoodTracker.this, "저장이 완료되었습니다!", Toast.LENGTH_LONG).show();
             }
         });
