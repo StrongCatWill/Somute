@@ -16,7 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     // Sound Table 생성
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE Sound(year INT, month INT, day INT, num INT)");
+        db.execSQL("CREATE TABLE Sound(date INT, num INT)");
     }
 
     // Sound Table Upgrade
@@ -27,9 +27,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     // Sound Table 데이터 입력
-    public void insert(int year, int month, int day, int num) {
+    public void insert(int date, int num) {
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("INSERT INTO Sound VALUES('" + year + "', '" + month + "', '" + day + "', '" + num + "');");
+        db.execSQL("INSERT INTO Sound VALUES('" + date + "', " + num + ");");
         db.close();
     }
 

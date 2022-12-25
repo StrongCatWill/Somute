@@ -29,6 +29,7 @@ public class MoodTracker extends AppCompatActivity {
 
         calView = (CalendarView) findViewById(R.id.calView);
         et_date = (EditText) findViewById(R.id.et_date);
+        et_soundNum = (EditText) findViewById(R.id.et_soundNum);
         btn_saveDB = (Button) findViewById(R.id.btn_saveDB);
         dbHelper =new DBHelper(MoodTracker.this, 1);
 
@@ -53,10 +54,7 @@ public class MoodTracker extends AppCompatActivity {
         calView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                cYear = year;
-                cMonth = month+1;
-                cDayOfMonth = dayOfMonth;
-                et_date.setText(year + "년 " + cMonth + "월 " + dayOfMonth + "일");
+
             }
         });
 
@@ -112,30 +110,7 @@ public class MoodTracker extends AppCompatActivity {
         btn_saveDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(et_soundNum.getText().equals("1")){
-                    cSoundNum = 1;
-                }
-                else if(et_soundNum.getText().equals("2")){
-                    cSoundNum = 2;
-                }
-                else if(et_soundNum.getText().equals("3")){
-                    cSoundNum = 3;
-                }
-                else if(et_soundNum.getText().equals("4")){
-                    cSoundNum = 4;
-                }
-                else if(et_soundNum.getText().equals("5")){
-                    cSoundNum = 5;
-                }
-                else if(et_soundNum.getText().equals("6")){
-                    cSoundNum = 6;
-                }
-                else if(et_soundNum.getText().equals("7")){
-                    cSoundNum = 7;
-                }
-                else { cSoundNum = 8; }
-
-                dbHelper.insert(cYear, cMonth, cDayOfMonth, cSoundNum);
+                dbHelper.insert(Integer.parseInt(et_date.getText().toString()), Integer.parseInt(et_soundNum.getText().toString()));
                 Toast.makeText(MoodTracker.this, "저장이 완료되었습니다!", Toast.LENGTH_LONG).show();
             }
         });
