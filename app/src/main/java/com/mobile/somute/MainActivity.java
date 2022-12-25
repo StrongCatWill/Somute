@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 다음 페이지로 이동하는 버튼 만들기.
+        // 다음 페이지로 이동하는 버튼 만들기
         btn_toMoodTracker = (Button) findViewById(R.id.btn_toMoodTracker);
         btn_toMoodTracker.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         btn_shutDownAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder_btnShutDown = new AlertDialog.Builder(MainActivity.this);
-                builder_btnShutDown.setMessage("정말로 종료하시겠습니까? \n저장된 데이터가 유실될 수 있습니다.");
-                builder_btnShutDown.setTitle("종료 알림창").setCancelable(false).setPositiveButton("예", new DialogInterface.OnClickListener() {
+                AlertDialog.Builder builder_shutDownAll = new AlertDialog.Builder(MainActivity.this);
+                builder_shutDownAll.setMessage("정말로 종료하시겠습니까? \n저장된 데이터가 유실될 수 있습니다.");
+                builder_shutDownAll.setTitle("종료 알림창").setCancelable(false).setPositiveButton("예", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
                                 finish();
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                 dialog.cancel();
                             }
                         });
-                AlertDialog alertDialog = builder_btnShutDown.create();
+                AlertDialog alertDialog = builder_shutDownAll.create();
                 alertDialog.setTitle("종료 알림창");
                 alertDialog.show();
             }
