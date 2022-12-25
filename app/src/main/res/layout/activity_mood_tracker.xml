@@ -11,7 +11,7 @@
     <CalendarView
         android:id="@+id/calView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,6 +55,125 @@
             android:hint="기록하고 싶은 무드의 번호를 입력하세요."
             android:textSize="15sp"
             android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/iBtn_mood1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood1"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood2"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood3"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood4"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood5"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood6"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood7"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/iBtn_mood8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood8"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_marginLeft="21dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_marginLeft="38dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_marginLeft="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_marginLeft="37dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_marginLeft="37dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_marginLeft="37dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_marginLeft="38dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_marginLeft="37dp"/>
 
     </LinearLayout>
 

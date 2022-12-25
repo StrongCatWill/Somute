@@ -12,7 +12,7 @@
         android:id="@+id/i_logoSomute"
         android:layout_width="246dp"
         android:layout_height="314dp"
-        android:src="@drawable/logo_somute" />
+        android:src="@drawable/logo_somute"/>
 
     <Button
         android:id="@+id/btn_toMoodTracker"
@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:backgroundTint="#33414C"
         android:layout_below="@+id/i_logoSomute"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp"/>
 
     <Button
         android:id="@+id/btn_toPlayMood"
@@ -34,7 +34,7 @@
         android:textStyle="bold"
         android:backgroundTint="#33414C"
         android:layout_below="@+id/btn_toMoodTracker"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp"/>
 
     <Button
         android:id="@+id/btn_shutDownAll"
@@ -46,6 +46,6 @@
         android:backgroundTint="#87403E"
         android:layout_below="@+id/btn_toPlayMood"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp" />
+        android:layout_marginLeft="80dp"/>
 
 </RelativeLayout>
