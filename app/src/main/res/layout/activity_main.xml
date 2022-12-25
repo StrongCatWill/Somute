@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/i_logoSomute"
+        android:layout_width="246dp"
+        android:layout_height="314dp"
+        android:src="@drawable/logo_somute" />
+
+    <Button
+        android:id="@+id/btn_toMoodTracker"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="MOOD TRACKER"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#33414C"
+        android:layout_below="@+id/i_logoSomute"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/btn_toPlayMood"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="PLAY THE MOOD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#33414C"
+        android:layout_below="@+id/btn_toMoodTracker"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/btn_shutDownAll"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="EXIT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#87403E"
+        android:layout_below="@+id/btn_toPlayMood"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp" />
+
+</RelativeLayout>
