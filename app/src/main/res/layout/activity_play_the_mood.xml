@@ -1,9 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".PlayTheMood">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_play2022"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play 2022"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play JAN"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play FEB"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play MAR"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play APR"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play MAY"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play JUN"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play JUL"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play AUG"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play SEP"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play OCT"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play NOV"
+        android:backgroundTint="#33414C"/>
+
+    <Button
+        android:id="@+id/btn_play12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play DEC"
+        android:backgroundTint="#33414C"/>
+
+</LinearLayout>

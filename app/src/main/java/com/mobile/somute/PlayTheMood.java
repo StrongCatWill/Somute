@@ -11,4 +11,5 @@ public class PlayTheMood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_the_mood);
     }
+
 }
