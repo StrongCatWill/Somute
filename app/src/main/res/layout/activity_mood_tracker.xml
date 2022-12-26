@@ -11,13 +11,210 @@
     <CalendarView
         android:id="@+id/calView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/t_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="날짜를 선택해주세요"
-        android:gravity="center"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜 : "
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="무드를 기록할 날짜를 선택하세요."
+            android:editable="false"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="번호 : "
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/et_soundNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="기록하고 싶은 무드의 번호를 입력하세요.  ex) 1"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/iBtn_mood1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood1"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood1"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood2"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood2"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood3"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood3"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood4"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood4"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood5"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood5"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood6"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood6"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood7"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood7"
+            />
+
+        <ImageButton
+            android:id="@+id/iBtn_mood8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood8"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="mood8"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_marginLeft="21dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_marginLeft="38dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_marginLeft="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_marginLeft="37dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_marginLeft="37dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_marginLeft="37dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_marginLeft="38dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_marginLeft="37dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="※ 버튼을 선택하면 소리가 들려요!"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btn_saveDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:backgroundTint="@color/teal_700"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"/>
 
 </LinearLayout>
