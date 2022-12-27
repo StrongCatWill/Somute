@@ -3,6 +3,7 @@ package com.mobile.somute;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ public class MoodTracker extends AppCompatActivity {
     int cYear, cMonth, cDayOfMonth;
     CalendarView calView;
     EditText et_date, et_soundNum;
-    Button btn_saveDB;
+    Button btn_saveDB, btn_goToMain;
     DBHelper dbHelper;
     ImageButton iBtn_mood1, iBtn_mood2, iBtn_mood3, iBtn_mood4, iBtn_mood5, iBtn_mood6, iBtn_mood7, iBtn_mood8;
     MediaPlayer mediaPlayer1, mediaPlayer2, mediaPlayer3, mediaPlayer4, mediaPlayer5, mediaPlayer6, mediaPlayer7, mediaPlayer8;
@@ -31,7 +32,8 @@ public class MoodTracker extends AppCompatActivity {
         et_date = (EditText) findViewById(R.id.et_date);
         et_soundNum = (EditText) findViewById(R.id.et_soundNum);
         btn_saveDB = (Button) findViewById(R.id.btn_saveDB);
-        dbHelper =new DBHelper(MoodTracker.this, 1);
+        dbHelper = new DBHelper(MoodTracker.this, 1);
+        btn_goToMain = (Button) findViewById(R.id.btn_goToMain);
 
         iBtn_mood1 = (ImageButton) findViewById(R.id.iBtn_mood1);
         iBtn_mood2 = (ImageButton) findViewById(R.id.iBtn_mood2);
@@ -115,6 +117,14 @@ public class MoodTracker extends AppCompatActivity {
             public void onClick(View v) {
                 dbHelper.insert(cYear, cMonth, cDayOfMonth, Integer.parseInt(et_soundNum.getText().toString()));
                 Toast.makeText(MoodTracker.this, "저장이 완료되었습니다!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btn_goToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MoodTracker.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 

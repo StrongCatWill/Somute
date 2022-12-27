@@ -33,7 +33,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    // Sound Table 데이터 수정
+    /*// Sound Table 데이터 수정
     public void Update(int date, int num) {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE Sound SET num = " + num + " WHERE date = '" + date + "'");
@@ -54,14 +54,158 @@ public class DBHelper extends SQLiteOpenHelper {
                     + "\n";
         }
         return result;
-    }
+    }*/
 
-    public String getResultDec() {
+    public String getResult2022() {
         // 읽기가 가능하게 DB 열기
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
         // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
-        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE (date-20221200)>0 ORDER BY date ASC", null);
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 ORDER BY year, month, day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult01() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=1 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult02() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=2 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult03() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=3 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult04() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=4 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult05() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=5 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult06() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=6 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult07() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=7 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult08() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=8 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult09() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=9 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult10() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=10 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult11() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=11 ORDER BY day ASC", null);
+        while (cursor.moveToNext()) {
+            result += cursor.getInt(0) + "-";
+        }
+        return result;
+    }
+
+    public String getResult12() {
+        // 읽기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        // 쿼리문과 Cursor를 사용하여 원하는 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT num FROM Sound WHERE year=2022 AND month=12 ORDER BY day ASC", null);
         while (cursor.moveToNext()) {
             result += cursor.getInt(0) + "-";
         }

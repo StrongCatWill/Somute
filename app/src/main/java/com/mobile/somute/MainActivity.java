@@ -13,7 +13,8 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView i_logoSomute;
-    Button btn_toMoodTracker, btn_shutDownAll;
+    Button btn_toMoodTracker, btn_shutDownAll, btn_toPlayMood;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +40,17 @@ public class MainActivity extends AppCompatActivity {
         btn_toMoodTracker.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //화면 전환
-                Intent intent = new Intent(MainActivity.this, MoodTracker.class);
+                // 화면 전환
+                intent = new Intent(MainActivity.this, MoodTracker.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_toPlayMood = (Button) findViewById(R.id.btn_toPlayMood);
+        btn_toPlayMood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, PlayTheMood.class);
                 startActivity(intent);
             }
         });
