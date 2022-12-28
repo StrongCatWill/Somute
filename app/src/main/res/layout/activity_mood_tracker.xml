@@ -202,4 +202,77 @@
         android:backgroundTint="#87403E"
         android:text="previous" />
 
+
+    <!--버튼 누르고 날짜 위에 올릴 이미지버튼-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <ImageView
+        android:id="@+id/iv_mood1_patch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/mood1"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/iv_mood2_patch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/mood2"
+        android:visibility="invisible"
+        />
+
+        <ImageView
+            android:id="@+id/iv_mood3_patch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood3"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/iv_mood4_patch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood4"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/iv_mood5_patch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood5"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/iv_mood6_patch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood6"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/iv_mood7_patch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood7"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/iv_mood8_patch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mood8"
+            android:visibility="invisible"
+            />
+</LinearLayout>
+
+
 </LinearLayout>
